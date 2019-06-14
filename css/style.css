@@ -16,9 +16,7 @@ body {
   display: grid;
   grid-template-columns: 50% 1fr;
   grid-template-rows: 20% 80%;
-  grid-template-areas:
-    "header instrucciones music"
-    "left left right";
+  grid-template-areas: "header instrucciones music" "left left right";
 }
 
 .container--grid {
@@ -87,7 +85,7 @@ h2 {
   display: inherit;
   grid-template: repeat(2, 50%) / repeat(2, 50%);
   background-color: #ffbe76;
-  border: 0.5rem solid black;
+  border: .5rem solid black;
   border-radius: 100%;
   overflow: hidden;
   position: relative;
@@ -107,7 +105,7 @@ h2 {
 
 .color {
   cursor: pointer;
-  border: 0.2rem solid black;
+  border: .2rem solid black;
 }
 
 .celeste,
@@ -163,7 +161,7 @@ h2 {
 }
 
 .configuration {
-  border-radius: 0.5rem;
+  border-radius: .5rem;
   background-color: white;
   overflow: hidden;
 }
@@ -186,7 +184,7 @@ h2 {
   display: grid;
   grid-template: repeat(2, 1fr) / repeat(2, 1fr);
   grid-template-areas: "btnGame btnOption" "btnRepeat btnRepeat";
-  grid-gap: 0.5rem 0.5rem;
+  grid-gap: .5rem .5rem;
 }
 
 .btn--game {
@@ -197,6 +195,10 @@ h2 {
 .btn--options {
   grid-area: btnOption;
   background-color: #6ab04c !important;
+  /* text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-content: center; */
 }
 
 .btn--repeat {
@@ -207,13 +209,13 @@ h2 {
   width: 100%;
   background-color: black;
   color: white;
-  padding: 0.5rem 0;
+  padding: .5rem 0;
   outline: none;
   border: none;
   cursor: pointer;
-  border-radius: 0.3rem;
+  border-radius: .3rem;
   font-size: 1rem;
-  transition: all 0.3s linear;
+  transition: all .3s linear;
 }
 
 .btn:hover {
@@ -227,7 +229,6 @@ h2 {
   text-align: center;
   padding: 1rem;
 }
-
 @media screen and (max-width: 767px) {
   .wrapper {
     background-color: brown;
@@ -235,16 +236,13 @@ h2 {
     height: 100vh;
     display: grid;
     grid-template-rows: 5% 5% 45% 40%;
-    grid-template-areas:
-      "header header"
-      "instrucciones music"
-      "left left"
-      "right right";
+    grid-template-areas: "header header" "instrucciones music" "left left" "right right";
   }
 
   .container--grid {
     align-items: center;
   }
+
   .title--container {
     border-bottom: none;
   }
@@ -263,7 +261,7 @@ h2 {
     display: inherit;
     grid-template: repeat(2, 50%) / repeat(2, 50%);
     background-color: #ffbe76;
-    border: 0.5rem solid black;
+    border: .5rem solid black;
     border-radius: 100%;
     overflow: hidden;
     position: relative;
@@ -272,7 +270,7 @@ h2 {
   .configuration h1 {
     background-color: #6699cc;
     color: white;
-    padding: 0.1rem 0.2rem;
+    padding: .1rem .2rem;
     font-size: 1.7rem;
     text-align: center;
   }
@@ -281,10 +279,9 @@ h2 {
     background-color: rgba(0, 0, 0, 0.1);
     color: #6c757d;
     text-align: center;
-    padding: 0.2rem;
+    padding: .2rem;
   }
 }
-
 @media screen and (max-width: 414px) {
   .wrapper {
     background-color: brown;
@@ -292,11 +289,7 @@ h2 {
     height: 100vh;
     display: grid;
     grid-template-rows: 2% 10% 43% 40%;
-    grid-template-areas:
-      "header header"
-      "instrucciones music"
-      "left left"
-      "right right";
+    grid-template-areas: "header header" "instrucciones music" "left left" "right right";
   }
 
   .container {
@@ -305,7 +298,7 @@ h2 {
     display: inherit;
     grid-template: repeat(2, 50%) / repeat(2, 50%);
     background-color: #ffbe76;
-    border: 0.5rem solid black;
+    border: .5rem solid black;
     border-radius: 100%;
     overflow: hidden;
     position: relative;
@@ -314,12 +307,12 @@ h2 {
   .configuration h1 {
     background-color: #6699cc;
     color: white;
-    padding: 0.2rem 2rem; /* Alto y ancho del padding color azul */
+    padding: .2rem 2rem;
+    /* Alto y ancho del padding color azul */
     font-size: 1.8rem;
     text-align: center;
   }
 }
-
 @media screen and (max-width: 375px) {
   .wrapper {
     background-color: brown;
@@ -327,11 +320,7 @@ h2 {
     height: 100vh;
     display: grid;
     grid-template-rows: 2% 9% 43% 45%;
-    grid-template-areas:
-      "header header"
-      "instrucciones music"
-      "left left"
-      "right right";
+    grid-template-areas: "header header" "instrucciones music" "left left" "right right";
   }
 
   .container {
@@ -340,7 +329,7 @@ h2 {
     display: inherit;
     grid-template: repeat(2, 50%) / repeat(2, 50%);
     background-color: #ffbe76;
-    border: 0.5rem solid black;
+    border: .5rem solid black;
     border-radius: 100%;
     overflow: hidden;
     position: relative;
@@ -349,12 +338,11 @@ h2 {
   .configuration h1 {
     background-color: #6699cc;
     color: white;
-    padding: 0.3rem 0.3rem;
+    padding: .3rem;
     font-size: 1.3rem;
     text-align: center;
   }
 }
-
 @media screen and (max-width: 360px) {
   .wrapper {
     background-color: brown;
@@ -362,11 +350,7 @@ h2 {
     height: 100vh;
     display: grid;
     grid-template-rows: 2% 7% 40% 41%;
-    grid-template-areas:
-      "header header"
-      "instrucciones music"
-      "left left"
-      "right right";
+    grid-template-areas: "header header" "instrucciones music" "left left" "right right";
   }
 
   .container {
@@ -375,7 +359,7 @@ h2 {
     display: inherit;
     grid-template: repeat(2, 50%) / repeat(2, 50%);
     background-color: #ffbe76;
-    border: 0.5rem solid black;
+    border: .5rem solid black;
     border-radius: 100%;
     overflow: hidden;
     position: relative;
@@ -384,7 +368,7 @@ h2 {
   .configuration h1 {
     background-color: #6699cc;
     color: white;
-    padding: 0.1rem 0.2rem;
+    padding: .1rem .2rem;
     font-size: 1.3rem;
     text-align: center;
   }

@@ -1,0 +1,16 @@
+{
+  "background_color": "purple",
+  "description": "Muestra por medio de manchas de calor los resultados operacionales ",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "ico/markp2.png",
+      
+      "sizes": "256x256",
+      "type": "image/png"
+    }
+  ],
+  "name": "Sistema mapa de calor de resultados operacionales",
+  "short_name": "Simcro",
+  "start_url": "/SIMCRO/index.html"
+}

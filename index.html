@@ -52,18 +52,31 @@
           </ul>
           <div class="buttons">
             <input class="btn btn--game" id="btn" type="button" value="Jugar" />
-            <input class="btn btn--options" type="button" value="Opciones" />
+            <!--  <input class="btn btn--options" type="reset" value="Opciones" /> -->
+            <!--  <a class="btn btn--options" id="ret" type="Reset" href="index.html"
+              >Reset</a
+            > -->
+
+            <input
+              class="btn btn--options"
+              id="refres"
+              type="button"
+              value="Reset"
+              onclick="javascript:window.location.reload();"
+            />
+
             <input
               class="btn btn--repeat"
               id="repeat"
               type="button"
-              value="Repetir Secuencia"
+              value="Repetir ultima Secuencia"
             />
           </div>
           <h2>Resultados</h2>
         </div>
       </div>
     </div>
+
     <audio
       volume="0.5"
       id="Juego-music"

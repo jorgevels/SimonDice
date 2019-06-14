@@ -11,6 +11,8 @@
   const $verde = document.getElementById("verde");
   const $btn = document.getElementById("btn");
   const $btnRepeat = document.getElementById("repeat");
+  const $refres = document.getElementById("ref");
+
   const $name = document.getElementById("name");
   const $puntos = document.getElementById("pts");
   const $nivel = document.getElementById("lvl");
@@ -35,7 +37,7 @@
 
     inicializar() {
       startEffect.play();
-      JuegoMusic.play();
+      /*  JuegoMusic.play(); */
       this.siguienteNivel = this.siguienteNivel.bind(this);
       this.elegirColor = this.elegirColor.bind(this);
       this.repeatSequenceColor = this.repeatSequenceColor.bind(this);
@@ -52,11 +54,38 @@
 
     // ReStart
     restart() {
-      this.eliminarEventosClick();
-      btn.classList.remove("hide");
+      this.removeEventClicks();
+      btn.classList.remove("btn--Juego");
+      /* refres.classList.remove("btn--juego"); */
+
+      $refres.addEventListener("click");
+      this.restart();
+
       if (JuegoMusic.paused) {
         JuegoMusic.play();
       }
+    }
+
+    reset() {
+      $refres.addEventListener("click");
+      JuegoMusic.play();
+      this.restart();
+    }
+
+    addEventClicks() {
+      for (const element in this.colores) {
+        this.colores[element].addEventListener("click", this.elegirColor);
+      }
+
+      $btnRepeat.addEventListener("click", this.repeatSequenceColor);
+    }
+
+    removeEventClicks() {
+      for (const element in this.colores) {
+        this.colores[element].removeEventListener("click", this.elegirColor);
+      }
+
+      $btnRepeat.addEventListener("click", this.repeatSequenceColor);
     }
 
     generarSecuencia() {
@@ -118,23 +147,8 @@
       JuegoMusic.pause();
     }
 
-    addEventClicks() {
-      for (const element in this.colores) {
-        this.colores[element].addEventListener("click", this.elegirColor);
-      }
-
-      $btnRepeat.addEventListener("click", this.repeatSequenceColor);
-    }
-
-    removeEventClicks() {
-      for (const element in this.colores) {
-        this.colores[element].removeEventListener("click", this.elegirColor);
-      }
-
-      $btnRepeat.addEventListener("click", this.repeatSequenceColor);
-    }
-
     repeatSequenceColor() {
+      startEffect.play();
       this.repeatCont++;
       this.iluminarSecuencia();
       $sequence.textContent = this.repeatCont;
@@ -149,6 +163,8 @@
     }
 
     ganoJuego() {
+      this.stopMusic();
+      winEffect.play();
       Swal.fire({
         title: "Felicidades Ganastes!",
         text: "¿Deseas jugar de nuevo?",
@@ -161,11 +177,13 @@
       }).then(result => {
         if (result.value) inicializarJuego();
         else $btn.addEventListener("click", inicializarJuego);
-        JuegoMusic.play();
+        /* JuegoMusic.play(); */
+        this.restart();
       });
     }
 
     perdioJuego() {
+      this.stopMusic();
       loseEffect.play();
       Swal.fire({
         title: "Lo siento, perdistes!",
@@ -178,7 +196,8 @@
       }).then(result => {
         if (result.value) inicializarJuego();
         else $btn.addEventListener("click", inicializarJuego);
-        JuegoMusic.play();
+        /*  JuegoMusic.play(); */
+        this.restart();
       });
     }
 
@@ -201,8 +220,8 @@
           this.removeEventClicks();
           if (this.nivel === ULTIMO_NIVEL + 1) {
             this.ganoJuego();
-            this.stopMusic();
-            winEffect.play();
+            /* this.stopMusic(); */
+            /* winEffect.play(); */
           } else {
             this.smssiguienteNivel();
             //setTimeout(this.siguienteNivel, 1500);
