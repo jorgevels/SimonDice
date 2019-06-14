@@ -1,4 +1,4 @@
-// Registrar al trabajador de servicios para controlar el funcionamiento del sitio sin conexión
+/* // Registrar al trabajador de servicios para controlar el funcionamiento del sitio sin conexión
 
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("/SimonDice-/sw.js").then(function() {
@@ -36,3 +36,4 @@ window.addEventListener("beforeinstallprompt", e => {
     });
   });
 });
+ */
