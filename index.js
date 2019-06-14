@@ -8,7 +8,7 @@ if ("serviceWorker" in navigator) {
 
 let deferredPrompt;
 const addBtn = document.querySelector(".add-button");
-addBtn.style.display = "none";
+/* addBtn.style.display = "none"; */
 
 window.addEventListener("beforeinstallprompt", e => {
   // Evita que Chrome 67 y versiones anteriores muestren automáticamente el aviso
