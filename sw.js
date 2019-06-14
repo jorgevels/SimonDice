@@ -2,11 +2,10 @@ self.addEventListener("install", function(e) {
   e.waitUntil(
     caches.open("video-store").then(function(cache) {
       return cache.addAll([
-        "/SIMCRO/",
-        "/SIMCRO/index.html",
-        "/SIMCRO/indexx.js",
-        "/SIMCRO/css/index.css",
-        "/SIMCRO/style.css"
+        "/SimonDice-/",
+        "/SimonDice-/index.html",
+        "/SimonDice-/js/main.js",
+        "/SimonDice-/css/style.css"
       ]);
     })
   );
