@@ -5,6 +5,7 @@ self.addEventListener("install", function(e) {
         "/SimonDice-/",
         "/SimonDice-/index.html",
         "/SimonDice-/js/main.js",
+        "/SimonDice-/index.js",
         "/SimonDice-/css/style.css"
       ]);
     })
