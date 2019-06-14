@@ -195,10 +195,7 @@ h2 {
 .btn--options {
   grid-area: btnOption;
   background-color: #6ab04c !important;
-  /* text-decoration: none;
-  display: flex;
-  justify-content: center;
-  align-content: center; */
+
 }
 
 .btn--repeat {

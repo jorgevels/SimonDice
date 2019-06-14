@@ -37,7 +37,6 @@
 
     inicializar() {
       startEffect.play();
-      /*  JuegoMusic.play(); */
       this.siguienteNivel = this.siguienteNivel.bind(this);
       this.elegirColor = this.elegirColor.bind(this);
       this.repeatSequenceColor = this.repeatSequenceColor.bind(this);
@@ -56,11 +55,8 @@
     restart() {
       this.removeEventClicks();
       btn.classList.remove("btn--Juego");
-      /* refres.classList.remove("btn--juego"); */
-
       $refres.addEventListener("click");
       this.restart();
-
       if (JuegoMusic.paused) {
         JuegoMusic.play();
       }
@@ -96,7 +92,9 @@
 
     siguienteNivel() {
       this.subnivel = 0;
+
       this.iluminarSecuencia();
+
       this.addEventClicks();
     }
 
@@ -128,6 +126,7 @@
 
     iluminarColor(color) {
       this.colores[color].classList.add("light");
+      pointerEffect.play();
       setTimeout(() => {
         this.colores[color].classList.remove("light");
       }, 350);
@@ -148,7 +147,6 @@
     }
 
     repeatSequenceColor() {
-      startEffect.play();
       this.repeatCont++;
       this.iluminarSecuencia();
       $sequence.textContent = this.repeatCont;
@@ -177,8 +175,7 @@
       }).then(result => {
         if (result.value) inicializarJuego();
         else $btn.addEventListener("click", inicializarJuego);
-        /* JuegoMusic.play(); */
-        this.restart();
+        JuegoMusic.play();
       });
     }
 
@@ -196,13 +193,12 @@
       }).then(result => {
         if (result.value) inicializarJuego();
         else $btn.addEventListener("click", inicializarJuego);
-        /*  JuegoMusic.play(); */
         this.restart();
       });
     }
 
     elegirColor(event) {
-      pointerEffect.play();
+      /* pointerEffect.play(); */
       const nombreColor = event.target.dataset.color;
       const numeroColor = this.transformarColorANumero(nombreColor);
       this.iluminarColor(nombreColor);
@@ -224,11 +220,14 @@
             /* winEffect.play(); */
           } else {
             this.smssiguienteNivel();
-            //setTimeout(this.siguienteNivel, 1500);
+
+            /* setTimeout(this.siguienteNivel, 1500); */
           }
         }
       } else {
         this.perdioJuego();
+        /* this.restart(); */
+
         //perdio
       }
     }
