@@ -4,9 +4,9 @@
   "display": "standalone",
   "icons": [
     {
-      "src": "ico/favicon.png",
+      "src": "ico/favicons.png",
 
-      "sizes": "300x300",
+      "sizes": "192x192",
       "type": "image/png"
     }
   ],
