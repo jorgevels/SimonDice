@@ -4,9 +4,9 @@
   "display": "standalone",
   "icons": [
     {
-      "src": "ico/markp2.png",
+      "src": "ico/favicon.png",
 
-      "sizes": "256x256",
+      "sizes": "300x300",
       "type": "image/png"
     }
   ],
