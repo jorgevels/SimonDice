@@ -1,12 +1,12 @@
 {
   "background_color": "purple",
-  "description": "Un juego divertido con una secuencia de colores (: ",
+  "description": "Un juego divertido con una secuencia de colores",
   "display": "standalone",
   "icons": [
     {
-      "src": "images/favicon.png",
+      "src": "ico/markp2.png",
 
-      "sizes": "300x300",
+      "sizes": "256x256",
       "type": "image/png"
     }
   ],
