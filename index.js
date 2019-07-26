@@ -1,7 +1,7 @@
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("/SimonDice/sw.js").then(function() {
     console.log("Service Worker Registered");
-  });
+  })
 }
 
 // Código para manejar la solicitud de instalación en el escritorio
