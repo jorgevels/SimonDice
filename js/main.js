@@ -24,7 +24,7 @@
   const loseEffect = document.getElementById("lose-effect");
   const winEffect = document.getElementById("win-effect");
 
-  const ULTIMO_NIVEL = 3;
+  const ULTIMO_NIVEL = 10;
 
   class Juego {
     constructor() {
@@ -92,10 +92,9 @@
 
     siguienteNivel() {
       this.subnivel = 0;
-
-      this.iluminarSecuencia();
-
+      this.iluminarSecuencia()
       this.addEventClicks();
+   
     }
 
     transformarNumeroAColor(numero) {
@@ -129,7 +128,7 @@
       pointerEffect.play();
       setTimeout(() => {
         this.colores[color].classList.remove("light");
-      }, 350);
+      }, 350); 
     }
 
     iluminarSecuencia() {
@@ -137,7 +136,7 @@
         const color = this.transformarNumeroAColor(this.sequence[i]);
         setTimeout(() => {
           this.iluminarColor(color);
-        }, 1000 * i);
+        }, 1000*i);
       }
     }
 
@@ -150,21 +149,26 @@
       this.repeatCont++;
       this.iluminarSecuencia();
       $sequence.textContent = this.repeatCont;
+      
     }
 
     smssiguienteNivel() {
       startEffect.play();
       Swal.fire({
         type: "success",
-        title: `Nivel ${this.nivel - 1} superado`
-      }).then(this.siguienteNivel);
+        title: `Nivel ${this.nivel - 1} superado <br> 😀`
+      })
+     /*  .then(this.siguienteNivel) */
+      
+      .then(setTimeout(this.siguienteNivel, 2500));
+
     }
 
     ganoJuego() {
       this.stopMusic();
       winEffect.play();
       Swal.fire({
-        title: "Felicidades Ganastes!",
+        title: `Felicidades Ganastes! <br> 🏆👏`,
         text: "¿Deseas jugar de nuevo?",
         showCancelButton: true,
         confirmButtonColor: "#3085d6",
@@ -183,7 +187,7 @@
       this.stopMusic();
       loseEffect.play();
       Swal.fire({
-        title: "Lo siento, perdistes!",
+        title: `Lo siento, perdistes! 🙁`,
         text: "¿Deseas jugar de nuevo?",
         showCancelButton: true,
         confirmButtonColor: "#3085d6",
@@ -220,8 +224,7 @@
             /* winEffect.play(); */
           } else {
             this.smssiguienteNivel();
-
-            /* setTimeout(this.siguienteNivel, 1500); */
+            
           }
         }
       } else {
@@ -248,7 +251,7 @@
                  <div style="text-align: left;"><strong>3.-</strong> Repetir la secuencia de colores de resta un punto.</div>
                  <div style="text-align: left;"><strong>4.-</strong> Completar los ${ULTIMO_NIVEL} Niveles.</div>
                  <br>
-                 <div style="text-align: right;"><strong>Dev.</strong> Jorge Velasquez</div>
+                 <div style="text-align: right;"><strong>Dev.</strong> Jorge Velasquez 😉</div>
                  `
     });
   });
