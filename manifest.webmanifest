@@ -2,6 +2,7 @@
   "background_color": "purple",
   "description": "Un juego divertido con una secuencia de colores",
   "display": "standalone",
+  "theme_color": "#ffa500",
   "icons": [
     {
       "src": "ico/favicons.png",
