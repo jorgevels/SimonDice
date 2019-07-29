@@ -248,7 +248,7 @@
       title: "¿Como Jugar?",
       html: `<div style="text-align: left;"><strong>1.-</strong> Cada acierto te suma 2 puntos.</div>
                  <div style="text-align: left;"><strong>2.-</strong> Acertar toda la secuencia de colores.</div>
-                 <div style="text-align: left;"><strong>3.-</strong> Repetir la secuencia de colores de resta un punto.</div>
+                 <div style="text-align: left;"><strong>3.-</strong> Repetir la secuencia de colores te resta un punto.</div>
                  <div style="text-align: left;"><strong>4.-</strong> Completar los ${ULTIMO_NIVEL} Niveles.</div>
                  <br>
                  <div style="text-align: right;"><strong>Dev.</strong> Jorge Velasquez 😉</div>
