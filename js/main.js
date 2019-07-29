@@ -24,7 +24,7 @@
   const loseEffect = document.getElementById("lose-effect");
   const winEffect = document.getElementById("win-effect");
 
-  const ULTIMO_NIVEL = 10;
+  const ULTIMO_NIVEL = 3;
 
   class Juego {
     constructor() {
@@ -41,6 +41,7 @@
       this.elegirColor = this.elegirColor.bind(this);
       this.repeatSequenceColor = this.repeatSequenceColor.bind(this);
       $btn.removeEventListener("click", inicializarJuego);
+     /*  $btn.removeEventListener("click", siguienteNivel); */
       $btn.classList.add("btn--Juego");
       this.nivel = 1;
       this.colores = {
@@ -80,7 +81,6 @@
       for (const element in this.colores) {
         this.colores[element].removeEventListener("click", this.elegirColor);
       }
-
       $btnRepeat.addEventListener("click", this.repeatSequenceColor);
     }
 
@@ -94,7 +94,6 @@
       this.subnivel = 0;
       this.iluminarSecuencia()
       this.addEventClicks();
-   
     }
 
     transformarNumeroAColor(numero) {
@@ -128,7 +127,7 @@
       pointerEffect.play();
       setTimeout(() => {
         this.colores[color].classList.remove("light");
-      }, 350); 
+      }, 500); 
     }
 
     iluminarSecuencia() {
@@ -136,7 +135,7 @@
         const color = this.transformarNumeroAColor(this.sequence[i]);
         setTimeout(() => {
           this.iluminarColor(color);
-        }, 1000*i);
+        }, 1200*i);
       }
     }
 
@@ -149,18 +148,21 @@
       this.repeatCont++;
       this.iluminarSecuencia();
       $sequence.textContent = this.repeatCont;
-      
+      this.restart();
     }
 
     smssiguienteNivel() {
       startEffect.play();
       Swal.fire({
         type: "success",
-        title: `Nivel ${this.nivel - 1} superado <br> 😀`
-      })
-     /*  .then(this.siguienteNivel) */
-      
-      .then(setTimeout(this.siguienteNivel, 2500));
+        title: `Nivel ${this.nivel - 1} superado <br> 😀`,
+          
+       
+      }).then(this.siguienteNivel)
+    
+     
+    /* .then(setTimeout(this.siguienteNivel, 2500)) */
+  
 
     }
 
@@ -173,13 +175,14 @@
         showCancelButton: true,
         confirmButtonColor: "#3085d6",
         cancelButtonColor: "#d33",
-        confirmButtonText: "Si",
-
+        confirmButtonText: "Si",     
         cancelButtonText: "No"
       }).then(result => {
-        if (result.value) inicializarJuego();
+        if (result.value) inicializarJuego ();
         else $btn.addEventListener("click", inicializarJuego);
         JuegoMusic.play();
+       
+       
       });
     }
 
@@ -187,7 +190,7 @@
       this.stopMusic();
       loseEffect.play();
       Swal.fire({
-        title: `Lo siento, perdistes! 🙁`,
+        title: `Lo siento, perdistes! <br> 🙁`,
         text: "¿Deseas jugar de nuevo?",
         showCancelButton: true,
         confirmButtonColor: "#3085d6",
@@ -198,11 +201,11 @@
         if (result.value) inicializarJuego();
         else $btn.addEventListener("click", inicializarJuego);
         this.restart();
+       
       });
     }
 
     elegirColor(event) {
-      /* pointerEffect.play(); */
       const nombreColor = event.target.dataset.color;
       const numeroColor = this.transformarColorANumero(nombreColor);
       this.iluminarColor(nombreColor);
@@ -241,6 +244,7 @@
   };
 
   $btn.addEventListener("click", inicializarJuego);
+
 
   $instructions.addEventListener("click", () => {
     Swal.fire({
