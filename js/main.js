@@ -24,7 +24,7 @@
   const loseEffect = document.getElementById("lose-effect");
   const winEffect = document.getElementById("win-effect");
 
-  const ULTIMO_NIVEL = 3;
+  const ULTIMO_NIVEL = 10;
 
   class Juego {
     constructor() {
