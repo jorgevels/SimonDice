@@ -31,6 +31,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 5px;
 }
 
 .options--grid {
@@ -85,7 +86,7 @@ h2 {
   display: inherit;
   grid-template: repeat(2, 50%) / repeat(2, 50%);
   background-color: #ffbe76;
-  border: .5rem solid black;
+  border: 0.5rem solid black;
   border-radius: 100%;
   overflow: hidden;
   position: relative;
@@ -105,7 +106,7 @@ h2 {
 
 .color {
   cursor: pointer;
-  border: .2rem solid black;
+  border: 0.2rem solid black;
 }
 
 .celeste,
@@ -161,7 +162,7 @@ h2 {
 }
 
 .configuration {
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   background-color: white;
   overflow: hidden;
 }
@@ -184,7 +185,7 @@ h2 {
   display: grid;
   grid-template: repeat(2, 1fr) / repeat(2, 1fr);
   grid-template-areas: "btnGame btnOption" "btnRepeat btnRepeat";
-  grid-gap: .5rem .5rem;
+  grid-gap: 0.5rem 0.5rem;
 }
 
 .btn--game {
@@ -195,28 +196,28 @@ h2 {
 .btn--options {
   grid-area: btnOption;
   background-color: #6ab04c !important;
-
 }
 
 .btn--repeat {
   grid-area: btnRepeat;
+  color: black !important;
 }
 
 .btn {
   width: 100%;
-  background-color: black;
+  background-color: #f7cb15;
   color: white;
-  padding: .5rem 0;
+  padding: 0.5rem 0;
   outline: none;
   border: none;
   cursor: pointer;
-  border-radius: .3rem;
+  border-radius: 0.3rem;
   font-size: 1rem;
-  transition: all .3s linear;
+  transition: all 0.3s linear;
 }
 
 .btn:hover {
-  background-color: #6699cc;
+  background-color: #fd3e81;
   transform: scale(1.05);
 }
 
@@ -258,7 +259,7 @@ h2 {
     display: inherit;
     grid-template: repeat(2, 50%) / repeat(2, 50%);
     background-color: #ffbe76;
-    border: .5rem solid black;
+    border: 0.5rem solid black;
     border-radius: 100%;
     overflow: hidden;
     position: relative;
@@ -267,7 +268,7 @@ h2 {
   .configuration h1 {
     background-color: #6699cc;
     color: white;
-    padding: .1rem .2rem;
+    padding: 0.1rem 0.2rem;
     font-size: 1.7rem;
     text-align: center;
   }
@@ -276,7 +277,7 @@ h2 {
     background-color: rgba(0, 0, 0, 0.1);
     color: #6c757d;
     text-align: center;
-    padding: .2rem;
+    padding: 0.2rem;
   }
 }
 @media screen and (max-width: 414px) {
@@ -290,24 +291,43 @@ h2 {
   }
 
   .container {
-    width: 90%;
+    width: 85%;
     height: 100%;
     display: inherit;
     grid-template: repeat(2, 50%) / repeat(2, 50%);
     background-color: #ffbe76;
-    border: .5rem solid black;
+    border: 0.5rem solid black;
     border-radius: 100%;
     overflow: hidden;
     position: relative;
+    margin-top: -15px;
   }
 
   .configuration h1 {
     background-color: #6699cc;
     color: white;
-    padding: .2rem 2rem;
+    padding: 0.2rem 2rem;
     /* Alto y ancho del padding color azul */
     font-size: 1.8rem;
     text-align: center;
+  }
+
+  .options {
+    margin-top: 25px;
+  }
+  @media screen and (max-width: 411px) {
+    .container {
+      width: 80%;
+      height: 90%;
+      display: inherit;
+      grid-template: repeat(2, 50%) / repeat(2, 50%);
+      background-color: #ffbe76;
+      border: 0.5rem solid black;
+      border-radius: 100%;
+      overflow: hidden;
+      position: relative;
+      margin-top: -20px;
+    }
   }
 }
 @media screen and (max-width: 375px) {
@@ -321,23 +341,27 @@ h2 {
   }
 
   .container {
-    width: 70%;
-    height: 90%;
+    width: 95%;
+    height: 100%;
     display: inherit;
     grid-template: repeat(2, 50%) / repeat(2, 50%);
     background-color: #ffbe76;
-    border: .5rem solid black;
+    border: 0.5rem solid black;
     border-radius: 100%;
     overflow: hidden;
     position: relative;
+    margin-top: 5px;
   }
 
   .configuration h1 {
     background-color: #6699cc;
     color: white;
-    padding: .3rem;
+    padding: 0.3rem;
     font-size: 1.3rem;
     text-align: center;
+  }
+  .options {
+    margin-top: 20px;
   }
 }
 @media screen and (max-width: 360px) {
@@ -356,17 +380,45 @@ h2 {
     display: inherit;
     grid-template: repeat(2, 50%) / repeat(2, 50%);
     background-color: #ffbe76;
-    border: .5rem solid black;
+    border: 0.5rem solid black;
     border-radius: 100%;
     overflow: hidden;
     position: relative;
+    margin-top: 18px;
   }
 
   .configuration h1 {
     background-color: #6699cc;
     color: white;
-    padding: .1rem .2rem;
+    padding: 0.1rem 0.2rem;
     font-size: 1.3rem;
     text-align: center;
+  }
+  .configuration ul {
+    padding: 15px;
+  }
+  .options {
+    margin-top: 20px;
+  }
+  @media screen and (max-width: 320px) {
+    .container {
+      width: 80%;
+      height: 100%;
+      display: inherit;
+      grid-template: repeat(2, 50%) / repeat(2, 50%);
+      background-color: #ffbe76;
+      border: 0.5rem solid black;
+      border-radius: 100%;
+      overflow: hidden;
+      position: relative;
+      margin-top: 40px;
+    }
+
+    .configuration ul {
+      padding: 5px;
+    }
+    .options {
+      margin-top: 73px;
+    }
   }
 }

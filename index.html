@@ -1,129 +1,87 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="icon" href="images/favicon.ico" />
 
-    <script src="index.js" diferir></script>
-    <link rel="manifest" href="manifest.webmanifest" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="images/favicon.ico" />
 
-    <title>Simon Dice</title>
-  </head>
-  <body onload="music('play')">
-    <div class="wrapper">
-      <div class="title--container">
-        <h1>Game</h1>
-        <h2>Simón Dice</h2>
+  <script src="index.js" diferir></script>
+  <link rel="manifest" href="manifest.webmanifest" />
+
+  <title>Simon Dice</title>
+</head>
+
+<body onload="music('play')">
+  <div class="wrapper">
+    <div class="title--container">
+      <h1>Game</h1>
+      <h2>Simón Dice</h2>
+    </div>
+
+    <h1 id="instrucciones" class="instrucciones">
+      <i class="fas fa-info-circle"></i>
+    </h1>
+    <div class="music">
+      <a href="#" id="control-music" onclick="controlAudio()">
+        <i class="fas fa-volume-up"></i>
+      </a>
+    </div>
+
+    <div class="container--grid">
+      <div class="container">
+        <div id="celeste" class="color celeste" data-color="celeste"></div>
+        <div id="violeta" class="color violeta" data-color="violeta"></div>
+        <div id="naranja" class="color naranja" data-color="naranja"></div>
+        <div id="verde" class="color verde" data-color="verde"></div>
+        <div class="circle"></div>
       </div>
-
-      <h1 id="instrucciones" class="instrucciones">
-        <i class="fas fa-info-circle"></i>
-      </h1>
-      <div class="music">
-        <a href="#" id="control-music" onclick="controlAudio()">
-          <i class="fas fa-volume-up"></i>
-        </a>
-      </div>
-
-      <div class="container--grid">
-        <div class="container">
-          <div id="celeste" class="color celeste" data-color="celeste"></div>
-          <div id="violeta" class="color violeta" data-color="violeta"></div>
-          <div id="naranja" class="color naranja" data-color="naranja"></div>
-          <div id="verde" class="color verde" data-color="verde"></div>
-          <div class="circle"></div>
-        </div>
-      </div>
-      <div class="options options--grid">
-        <div class="configuration">
-          <h1>Configuración del Juego</h1>
-          <ul>
-            <li><strong>Nombre:</strong> <span id="name"></span></li>
-            <li><strong>Puntaje:</strong> <span id="pts">0</span> puntos</li>
-            <li><strong>Nivel:</strong> <span id="lvl">1</span></li>
-            <li>
-              <strong>Secuencia repetidas: </strong><span id="sequence">0</span>
-            </li>
-          </ul>
-          <div class="buttons">
-            <input class="btn btn--game" id="btn" type="button" value="Jugar" />
-            <!--  <input class="btn btn--options" type="reset" value="Opciones" /> -->
-            <!--  <a class="btn btn--options" id="ret" type="Reset" href="index.html"
+    </div>
+    <div class="options options--grid">
+      <div class="configuration">
+        <h1>Configuración del Juego</h1>
+        <ul>
+          <li><strong>Nombre:</strong> <span id="name"></span></li>
+          <li><strong>Puntaje:</strong> <span id="pts">0</span> puntos</li>
+          <li><strong>Nivel:</strong> <span id="lvl">1</span></li>
+          <li>
+            <strong>Secuencia repetidas: </strong><span id="sequence">0</span>
+          </li>
+        </ul>
+        <div class="buttons">
+          <input class="btn btn--game" id="btn" type="button" value="Jugar" />
+          <!--  <input class="btn btn--options" type="reset" value="Opciones" /> -->
+          <!--  <a class="btn btn--options" id="ret" type="Reset" href="index.html"
               >Reset</a
             > -->
 
-            <input
-              class="btn btn--options"
-              id="refres"
-              type="button"
-              value="Reset"
-              onclick="javascript:window.location.reload();"
-            />
+          <input class="btn btn--options" id="refres" type="button" value="Reset"
+            onclick="javascript:window.location.reload();" />
 
-            <input
-              class="btn btn--repeat"
-              id="repeat"
-              type="button"
-              value="Repetir ultima Secuencia"
-            />
-          </div>
-          <h2>Resultados</h2>
+          <input class="btn btn--repeat" id="repeat" type="button" value="Retando tu concentración" />
         </div>
+        <h2>Resultados</h2>
       </div>
     </div>
+  </div>
 
-    <audio
-      volume="0.1"
-      id="Juego-music"
-      src="sounds/Bit-Quest.mp3"
-      preload="auto"
-      controls="none"
-      style="display: none;"
-      loop
-    ></audio>
-    <audio
-      volume="0.1"
-      id="pointer-effect"
-      src="sounds/pointer.wav"
-      preload="auto"
-      controls="none"
-      style="display: none;"
-    ></audio>
-    <audio
-      volume="0.1"
-      id="start-effect"
-      src="sounds/start.ogg"
-      preload="auto"
-      controls="none"
-      style="display: none;"
-    ></audio>
-    <audio
-      volume="0.1"
-      id="lose-effect"
-      src="sounds/lose.wav"
-      preload="auto"
-      controls="none"
-      style="display: none;"
-    ></audio>
-    <audio
-      volume="0.1"
-      id="win-effect"
-      src="sounds/win.mp3"
-      preload="auto"
-      controls="none"
-      style="display: none;"
-    ></audio>
+  <audio volume="0.1" id="Juego-music" src="sounds/Bit-Quest.mp3" preload="auto" controls="none" style="display: none;"
+    loop></audio>
+  <audio volume="0.1" id="pointer-effect" src="sounds/pointer.wav" preload="auto" controls="none"
+    style="display: none;"></audio>
+  <audio volume="0.1" id="start-effect" src="sounds/start.ogg" preload="auto" controls="none"
+    style="display: none;"></audio>
+  <audio volume="0.1" id="lose-effect" src="sounds/lose.wav" preload="auto" controls="none"
+    style="display: none;"></audio>
+  <audio volume="0.1" id="win-effect" src="sounds/win.mp3" preload="auto" controls="none"
+    style="display: none;"></audio>
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
-    <script src="js/main.js"></script>
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+  <script src="js/main.js"></script>
+</body>
+
 </html>
