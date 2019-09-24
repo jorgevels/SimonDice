@@ -8,7 +8,7 @@ if ("serviceWorker" in navigator) {
 
 let deferredPrompt;
 const addBtn = document.querySelector(".btn-warning");
-/* addBtn.style.display = "none"; */
+addBtn.style.display = "none";
 
 window.addEventListener("beforeinstallprompt", e => {
   // Evita que Chrome 67 y versiones anteriores muestren automáticamente el aviso
@@ -16,11 +16,11 @@ window.addEventListener("beforeinstallprompt", e => {
   // Guarda el evento para que pueda activarse más tarde.
   deferredPrompt = e;
   // Actualizar la interfaz de usuario para notificar al usuario que puede agregar a la pantalla de inicio
-  /*  addBtn.style.display = "block"; */
+  addBtn.style.display = "block";
 
   addBtn.addEventListener("click", e => {
     // Oculta nuestra interfaz de usuario que muestra nuestro botón A2HS.
-    /*  addBtn.style.display = "none"; */
+    addBtn.style.display = "none";
     // Mostrar el aviso
     deferredPrompt.prompt();
     // Espere a que el usuario responda a la pregunta
