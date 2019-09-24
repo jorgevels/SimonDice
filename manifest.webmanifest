@@ -5,7 +5,7 @@
   "theme_color": "#ffa500",
   "icons": [
     {
-      "src": "ico/favicon.png",
+      "src": "ico/favicons.png",
 
       "sizes": "192x192",
       "type": "image/png"
