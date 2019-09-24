@@ -191,11 +191,13 @@ h2 {
 .btn--game {
   grid-area: btnGame;
   background-color: #6ab04c !important;
+  /* border: #6ab04c solid !important; */
 }
 
 .btn--options {
   grid-area: btnOption;
-  background-color: #6ab04c !important;
+  background-color: #960200 !important;
+  /*  border: red solid !important; */
 }
 
 .btn--repeat {

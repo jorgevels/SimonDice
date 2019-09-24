@@ -10,7 +10,7 @@
   const $naranja = document.getElementById("naranja");
   const $verde = document.getElementById("verde");
   const $btn = document.getElementById("btn");
-  const $btnRepeat = document.getElementById("repeat");
+  /*  const $btnRepeat = document.getElementById("repeat"); */
   const $refres = document.getElementById("ref");
 
   const $name = document.getElementById("name");
@@ -24,7 +24,7 @@
   const loseEffect = document.getElementById("lose-effect");
   const winEffect = document.getElementById("win-effect");
 
-  const ULTIMO_NIVEL = 10  ;
+  const ULTIMO_NIVEL = 10;
 
   class Juego {
     constructor() {
@@ -74,14 +74,14 @@
         this.colores[element].addEventListener("click", this.elegirColor);
       }
 
-     /*  $btnRepeat.addEventListener("click", this.repeatSequenceColor); */
+      /*  $btnRepeat.addEventListener("click", this.repeatSequenceColor); */
     }
 
     removeEventClicks() {
       for (const element in this.colores) {
         this.colores[element].removeEventListener("click", this.elegirColor);
       }
-      $btnRepeat.addEventListener("click", this.repeatSequenceColor);
+      /*  $btnRepeat.addEventListener("click", this.repeatSequenceColor); */
     }
 
     generarSecuencia() {
@@ -235,7 +235,6 @@
   };
 
   $btn.addEventListener("click", inicializarJuego);
-
 
   $instructions.addEventListener("click", () => {
     Swal.fire({
