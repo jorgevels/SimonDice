@@ -16,7 +16,7 @@ body {
   align-items: center;
 }
 .btn-warning {
-  color: black;
+  color: black !important;
 }
 
 .wrapper {
