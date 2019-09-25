@@ -15,6 +15,9 @@ body {
   justify-content: center;
   align-items: center;
 }
+.btn-warning {
+  color: black;
+}
 
 .wrapper {
   background-color: brown;
