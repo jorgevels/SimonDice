@@ -7,6 +7,7 @@
 
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Muli", sans-serif;
 }
 
 .container-btn-add {
@@ -42,6 +43,7 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 5px;
+  margin-right: 5%;
 }
 
 .options--grid {
@@ -85,14 +87,20 @@ a .fa-volume-up {
   text-align: center;
   margin-top: 5px;
 }
+h3,
+h4 {
+  font-family: "Press Start 2P", cursive;
+  font-size: 1.5rem;
+  margin-top: 12px;
+}
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .container {
-  width: 60%;
-  height: 80%;
+  width: 50%;
+  height: 90%;
   display: inherit;
   grid-template: repeat(2, 50%) / repeat(2, 50%);
   background-color: #ffbe76;
@@ -181,7 +189,8 @@ h2 {
   background-color: #6699cc;
   color: white;
   padding: 1rem 2rem;
-  font-size: 2.5rem;
+  font-size: 2rem;
+  text-align: center;
 }
 
 .configuration ul {
@@ -302,6 +311,15 @@ h2 {
     grid-template-areas: "header header" "instrucciones music" "left left" "right right";
   }
 
+  .title--container h3,
+  h4 {
+    font-family: "Press Start 2P", cursive;
+    font-size: 1.2rem;
+    margin-top: 5px;
+  }
+  h4 {
+    font-size: 1rem;
+  }
   .container {
     width: 85%;
     height: 100%;
@@ -327,7 +345,24 @@ h2 {
   .options {
     margin-top: 25px;
   }
+  .options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    margin-left: 5%;
+  }
+
   @media screen and (max-width: 411px) {
+    .title--container h3,
+    h4 {
+      font-family: "Press Start 2P", cursive;
+      font-size: 1.2rem;
+      margin-top: 5px;
+    }
+    h4 {
+      font-size: 1rem;
+    }
     .container {
       width: 80%;
       height: 90%;
@@ -339,6 +374,12 @@ h2 {
       overflow: hidden;
       position: relative;
       margin-top: -20px;
+    }
+    .options {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 5px;
     }
   }
 }
@@ -352,6 +393,15 @@ h2 {
     grid-template-areas: "header header" "instrucciones music" "left left" "right right";
   }
 
+  .title--container h3,
+  h4 {
+    font-family: "Press Start 2P", cursive;
+    font-size: 1.2rem;
+    margin-top: 5px;
+  }
+  h4 {
+    font-size: 0.9rem;
+  }
   .container {
     width: 95%;
     height: 100%;
@@ -375,6 +425,12 @@ h2 {
   .options {
     margin-top: 20px;
   }
+  .options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+  }
 }
 @media screen and (max-width: 360px) {
   .wrapper {
@@ -384,6 +440,15 @@ h2 {
     display: grid;
     grid-template-rows: 2% 7% 40% 41%;
     grid-template-areas: "header header" "instrucciones music" "left left" "right right";
+  }
+  .title--container h3,
+  h4 {
+    font-family: "Press Start 2P", cursive;
+    font-size: 1.2rem;
+    margin-top: 5px;
+  }
+  h4 {
+    font-size: 1rem;
   }
 
   .container {
@@ -412,7 +477,23 @@ h2 {
   .options {
     margin-top: 20px;
   }
-  @media screen and (max-width: 320px) {
+  .options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+  }
+
+  @media screen and (min-width: 320px) {
+    .title--container h3,
+    h4 {
+      font-family: "Press Start 2P", cursive;
+      font-size: 1.2rem;
+      margin-top: 5px;
+    }
+    h4 {
+      font-size: 0.7rem;
+    }
     .container {
       width: 80%;
       height: 100%;
@@ -431,6 +512,12 @@ h2 {
     }
     .options {
       margin-top: 73px;
+    }
+    .options {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 5px;
     }
   }
 }
