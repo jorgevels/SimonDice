@@ -2,7 +2,7 @@
 
 _Un pequeño juego que te permite avanzar por los niveles recordando una secuencia de colores que se van iluminando_
 
-![Captura de la App](./readme-static/captura.jpg)
+![Captura de la App](./readme-static/captura.png)
 
 ## Comenzando 🚀
 
