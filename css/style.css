@@ -44,6 +44,7 @@ body {
   align-items: center;
   margin-top: 5px;
   margin-right: 5%;
+  /* width: 400px; */
 }
 
 .options--grid {
@@ -188,8 +189,9 @@ h2 {
 .configuration h1 {
   background-color: #6699cc;
   color: white;
-  padding: 1rem 2rem;
-  font-size: 2rem;
+  padding: 1rem 1rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.5pt;
   text-align: center;
 }
 
@@ -200,11 +202,14 @@ h2 {
 }
 
 .configuration .buttons {
-  padding: 0 3rem 1rem;
+  padding: 0 1.5rem 1rem;
   display: grid;
   grid-template: repeat(2, 1fr) / repeat(2, 1fr);
   grid-template-areas: "btnGame btnOption" "btnRepeat btnRepeat";
   grid-gap: 0.5rem 0.5rem;
+}
+.btn {
+  width: 120%;
 }
 
 .btn--game {
@@ -290,7 +295,8 @@ h2 {
     background-color: #6699cc;
     color: white;
     padding: 0.1rem 0.2rem;
-    font-size: 1.7rem;
+    font-size: 1.3rem;
+    letter-spacing: 4pt;
     text-align: center;
   }
 
@@ -338,7 +344,8 @@ h2 {
     color: white;
     padding: 0.2rem 2rem;
     /* Alto y ancho del padding color azul */
-    font-size: 1.8rem;
+    font-size: 1.3rem;
+    letter-spacing: 4pt;
     text-align: center;
   }
 
@@ -381,6 +388,15 @@ h2 {
       align-items: center;
       margin-top: 5px;
     }
+    .configuration h1 {
+      background-color: #6699cc;
+      color: white;
+      padding: 0.2rem 2rem;
+      /* Alto y ancho del padding color azul */
+      font-size: 1.3rem;
+      letter-spacing: 4pt;
+      text-align: center;
+    }
   }
 }
 @media screen and (max-width: 375px) {
@@ -420,6 +436,7 @@ h2 {
     color: white;
     padding: 0.3rem;
     font-size: 1.3rem;
+    letter-spacing: 4pt;
     text-align: center;
   }
   .options {
@@ -469,6 +486,7 @@ h2 {
     color: white;
     padding: 0.1rem 0.2rem;
     font-size: 1.3rem;
+    letter-spacing: 4pt;
     text-align: center;
   }
   .configuration ul {
@@ -518,6 +536,15 @@ h2 {
       justify-content: center;
       align-items: center;
       margin-top: 5px;
+    }
+    .configuration h1 {
+      background-color: #6699cc;
+      color: white;
+      padding: 0.2rem 2rem;
+      /* Alto y ancho del padding color azul */
+      font-size: 1.3rem;
+      letter-spacing: 4pt;
+      text-align: center;
     }
   }
 }
