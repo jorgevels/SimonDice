@@ -31,13 +31,6 @@ async function precache() {
   // Añadimos una lista de todos nuestros recursos del proyecto
   return cache.addAll([
     // Es muy importante ya que las paginas tambien las solicitamos como / debemos capturar esta request
-    "/UnPokemon/",
-    "/UnPokemon/index.html",
-    "/UnPokemon/indexx.js",
-    "/UnPokemon/css/index.css",
-    "/UnPokemon/js/index.js",
-    "/UnPokemon/ico/poke.ico",
-    "/UnPokemon/ico/poke.png"
   ]);
 }
 
