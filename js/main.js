@@ -214,7 +214,7 @@
             this.puntos += this.subnivel * 2 - this.repeatCont;
           } else this.puntos = this.subnivel * 2;
           this.repeatCont = 0;
-          $sequence.textContent = this.repeatCont;
+          /*  $sequence.textContent = this.repeatCont; */
           $puntos.textContent = this.puntos < 0 ? 0 : this.puntos;
           $nivel.textContent = this.nivel;
           this.removeEventClicks();
