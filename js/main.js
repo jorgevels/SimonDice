@@ -3,6 +3,11 @@
  * Proyecto Final - Simon dice
  */
 
+/**
+ * Juego
+ * Proyecto Final - Simon dice
+ */
+
 (async function() {
   const btn = document.getElementById("btn");
   const $celeste = document.getElementById("celeste");
@@ -157,6 +162,8 @@
         type: "success",
         title: `Nivel ${this.nivel - 1} superado <br> 😀`
       }).then(this.siguienteNivel);
+
+      /* .then(setTimeout(this.siguienteNivel, 2500)) */
     }
 
     ganoJuego() {
@@ -213,6 +220,8 @@
           this.removeEventClicks();
           if (this.nivel === ULTIMO_NIVEL + 1) {
             this.ganoJuego();
+            /* this.stopMusic(); */
+            /* winEffect.play(); */
           } else {
             this.smssiguienteNivel();
           }
@@ -225,7 +234,6 @@
       }
     }
   }
-
   const inicializarJuego = () => {
     const simonJuego = new Juego();
   };
